@@ -34,8 +34,10 @@ export function MeerlumeCaseStudy({ project }: { project: Project }) {
 
           <Section title="Engineering" heading="h3" art={HardHat} side="left">
             <p>
-              I designed and built most of Meerlume: the builder, the shared inbox, bookings and calendars, and
-              the connections to all five apps. I build with AI coding agents,
+              I designed and built most of Meerlume, front end and back end: the builder, the shared inbox,
+              bookings and calendars, and the connections to all five apps, on a Fastify API over Postgres, with
+              our own sign-in and Paddle billing. A bot runs the flow it was built with and never calls a model,
+              which keeps it cheap and predictable. I build with AI coding agents,
               mostly Claude Code. The agent writes the code, so most of my time goes into deciding how a feature
               should work and how it should feel.
             </p>

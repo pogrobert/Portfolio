@@ -31,7 +31,7 @@ export function SoftrCaseStudy({ project }: { project: Project }) {
 
         <Section title="Comments" art={CommentsLinework} side="left" link={{ label: 'Softr docs', href: `${docs}/comments-block` }}>
           Comments comes in two forms: an action button in the Item Details block that opens a sliding drawer, and
-          a separate block placed under Item Details. I took it from idea to production: I built the block, designed
+          a separate block placed under Item Details. I took it from idea to production: I built the block and its live updates, designed
           and built its pieces in Apricot, such as avatars, the comment input and the emoji picker, and made the
           architectural change that lets Comments read the open item without breaking the isolation between blocks.
         </Section>
@@ -46,7 +46,7 @@ export function SoftrCaseStudy({ project }: { project: Project }) {
           I worked on every other block too: a lot on Calendar, and on List, Item Details and Charts, both
           the old and the new versions of each, and the new Grid. I added polling to many of them, so they keep their data up to date
           instead of showing stale records. I led the block side of Onboarding and Standalone Form, and my last feature was
-          Global Search.
+          Global Search, which streams in records from every connected database as they’re found.
         </Section>
       </div>
 
