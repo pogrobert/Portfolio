@@ -23,6 +23,23 @@ type Painting = {
 // Each project is pictured with a public-domain painting that winks at its name, and
 // Surfaces with a picture it drew itself.
 export const paintings: Record<Slug, Painting> = {
+  // Not a painting but a photograph: one gallop cut into fractions of a second, for a
+  // builder named after how long it takes. The card is 1.62 times as wide as it's tall;
+  // the file trims a little off each side to the shared frame, so the credit says detail.
+  seconds: {
+    src: '/images/muybridge-the-horse-in-motion.webp',
+    alt: 'Twelve silhouettes of a horse and rider at a gallop, one stride caught frame by frame in a grid',
+    artist: 'Eadweard Muybridge',
+    lifespan: '1830–1904',
+    work: (
+      <>
+        <cite>The Horse in Motion</cite> (detail), 1878
+      </>
+    ),
+    medium: 'Albumen print',
+    museum: 'Library of Congress',
+    nod: 'A nod to the name',
+  },
   // A mezzotint still life drawn by the library, labelled like the paintings beside it.
   // scripts/draw-surfaces.ts draws the file, in the one frame they all share.
   surfaces: {

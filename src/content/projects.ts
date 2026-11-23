@@ -1,4 +1,4 @@
-export type Slug = 'stamplyn' | 'meerlume' | 'softr' | 'goya' | 'surfaces'
+export type Slug = 'stamplyn' | 'meerlume' | 'softr' | 'goya' | 'seconds' | 'surfaces'
 
 export type Project = {
   // Also the key of the project's painting, mark and case study page.
@@ -92,6 +92,21 @@ export const projects: Project[] = [
       },
     ],
     kind: 'work',
+  },
+  {
+    slug: 'seconds',
+    name: 'Seconds',
+    tagline: 'A website from a few words, in about two seconds.',
+    role: 'Author',
+    period: '2026',
+    dates: 'Nov 2026',
+    summary:
+      'An AI website builder where no model writes code. Say in a sentence what the site is for and get a finished one-page site in about two seconds, in three designs, then change it by asking.',
+    links: [
+      { label: 'seconds.pogrobert.com', href: 'https://seconds.pogrobert.com' },
+      { label: 'GitHub', href: 'https://github.com/pogrobert/Seconds' },
+    ],
+    kind: 'side',
   },
   {
     slug: 'surfaces',

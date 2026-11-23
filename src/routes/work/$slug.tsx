@@ -3,6 +3,7 @@ import type { ComponentType } from 'react'
 import { CaseStudyHeader } from '../../components/CaseStudySections'
 import { HomeLink } from '../../components/HomeLink'
 import { MeerlumeCaseStudy } from '../../components/MeerlumeCaseStudy'
+import { SecondsCaseStudy } from '../../components/SecondsCaseStudy'
 import { SoftrCaseStudy } from '../../components/SoftrCaseStudy'
 import { StamplynCaseStudy } from '../../components/StamplynCaseStudy'
 import { SurfacesCaseStudy } from '../../components/SurfacesCaseStudy'
@@ -34,6 +35,7 @@ const pages: Partial<Record<Slug, ComponentType<{ project: Project }>>> = {
   softr: SoftrCaseStudy,
   meerlume: MeerlumeCaseStudy,
   stamplyn: StamplynCaseStudy,
+  seconds: SecondsCaseStudy,
   surfaces: SurfacesCaseStudy,
 }
 

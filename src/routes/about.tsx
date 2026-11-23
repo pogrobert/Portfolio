@@ -82,6 +82,14 @@ function About() {
               same picture.
             </div>
             <div>
+              Lately I’ve been building{' '}
+              <Mention slug="seconds">
+                Seconds
+              </Mention>
+              , a website builder where no model writes code. You say in a sentence what the site is for, and in about two
+              seconds you get a finished page in three designs, which you change by asking.
+            </div>
+            <div>
               You can find me on <a href={site.links.github}>GitHub</a>, <a href={site.links.linkedin}>LinkedIn</a> and{' '}
               <a href={site.links.x}>X</a>, or write to <a href={`mailto:${site.email}`}>{site.email}</a>.
             </div>

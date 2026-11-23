@@ -47,6 +47,10 @@ function Home() {
               Stamplyn
             </Mention>
             , a travel app where you collect a stamp from every landmark you visit. On the side, I made{' '}
+            <Mention slug="seconds">
+              Seconds
+            </Mention>
+            , which turns a few words into a website in about two seconds, and{' '}
             <Mention slug="surfaces">
               Surfaces
             </Mention>

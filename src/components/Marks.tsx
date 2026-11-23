@@ -1,4 +1,4 @@
-import type { ComponentType, ReactNode } from 'react'
+import { useId, type ComponentType, type ReactNode } from 'react'
 import type { Slug } from '../content/projects'
 
 // Company marks that sit next to a case study's title. They're still: the case study's
@@ -112,8 +112,52 @@ export function SurfacesMark({ className }: { className?: string }) {
   )
 }
 
+// Seconds' icon, from its own app: three pages fanned out on a near-black tile, the two at
+// the sides smeared sideways like a quick pick, over a teal glow, with a fine grain. The
+// filters are named per mark, so two marks on one page wouldn't share them.
+export function SecondsMark({ className }: { className?: string }) {
+  const id = useId()
+  const ref = (name: string) => `url(#${id}${name})`
+  return (
+    <Mark className={className} viewBox="0 0 128 128">
+      <defs>
+        <filter id={`${id}side`} x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="9 1.5" />
+        </filter>
+        <filter id={`${id}centre`} x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="2.5 0.6" />
+        </filter>
+        <filter id={`${id}glow`} x="-50%" y="-50%" width="200%" height="200%">
+          <feGaussianBlur stdDeviation="14" />
+        </filter>
+        <filter id={`${id}grain`}>
+          <feTurbulence type="fractalNoise" baseFrequency="1.4" numOctaves="2" seed="3" />
+          <feColorMatrix values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 .22 0" />
+          <feComposite in2="SourceGraphic" operator="in" />
+        </filter>
+        <clipPath id={`${id}tile`}>
+          <rect width="128" height="128" rx="30" />
+        </clipPath>
+      </defs>
+      <g clipPath={ref('tile')}>
+        <rect width="128" height="128" fill="#121211" />
+        <ellipse cx="64" cy="70" rx="46" ry="30" fill="#0f766e" filter={ref('glow')} opacity=".8" />
+        <g filter={ref('side')}>
+          <rect x="22" y="38" width="34" height="52" rx="8" fill="#5eafa5" transform="rotate(-14 64 120)" />
+          <rect x="72" y="38" width="34" height="52" rx="8" fill="#b7d98a" transform="rotate(14 64 120)" />
+        </g>
+        <rect x="46" y="28" width="36" height="58" rx="9" fill="#fff" filter={ref('centre')} />
+        <rect width="128" height="128" filter={ref('grain')} opacity=".9" />
+      </g>
+      {/* A hairline keeps the tile's edge on the near-black dark background, as Meerlume's does. */}
+      <rect x="0.5" y="0.5" width="127" height="127" rx="29.5" fill="none" stroke="var(--line)" />
+    </Mark>
+  )
+}
+
 // Each project's mark.
 export const marks: Record<Slug, ComponentType<{ className?: string }>> = {
+  seconds: SecondsMark,
   meerlume: MeerlumeMark,
   stamplyn: StamplynMark,
   softr: SoftrMark,
