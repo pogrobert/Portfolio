@@ -8,7 +8,7 @@ export function StamplynCaseStudy({ project }: { project: Project }) {
         Stamplyn is a travel app where you collect a stamp from every landmark you visit, by being there. Your
         passport fills up as you travel, and you can follow your friends’ stamps and see where you rank in your
         city, your country and the world. We’re a team of four co-founders, and I lead product, design and
-        engineering. It’s in its final stage, being tested ahead of launch.
+        engineering. It’s out now on the App Store and Google Play.
       </CaseStudyHeader>
 
       <div className="mt-16 flex flex-col gap-16">

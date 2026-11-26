@@ -36,7 +36,11 @@ export const projects: Project[] = [
     dates: 'Sep 2026 – present',
     summary:
       'A travel app where you collect a stamp from every landmark you visit, by being there, and follow your friends’ stamps. Built with Expo and React Native, for iPhone and Android.',
-    links: [{ label: 'stamplyn.com', href: 'https://stamplyn.com' }],
+    links: [
+      { label: 'stamplyn.com', href: 'https://stamplyn.com' },
+      { label: 'App Store', href: 'https://apps.apple.com/app/id6829894933' },
+      { label: 'Google Play', href: 'https://play.google.com/store/apps/details?id=com.stamplyn.app' },
+    ],
     kind: 'work',
   },
   {
